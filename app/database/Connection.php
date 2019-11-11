@@ -1,8 +1,13 @@
 <?php
+
 namespace App\database;
-class Connection {
+
+// require 'app/bootstrap.php';
+
+class  Connection{
+
     public static function make($config){
-        try{
+        try {
             return new PDO($config['connection'].';dbname='.$config['name'],
             $config['username'],
             $config['password'],
