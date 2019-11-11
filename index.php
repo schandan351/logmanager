@@ -7,10 +7,6 @@ $config=require "config.php";
  use App\database\Connection;
  use App\database\QueryBuilder;
 
-//  require 'app/database/Connection.php';
-//  require 'app/database/QueryBuilder.php';
-
-
  $pdo=Connection::make($config);
 
  $logsquery=new QueryBuilder($pdo);

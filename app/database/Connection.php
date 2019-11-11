@@ -2,7 +2,7 @@
 
 namespace App\database;
 
-// require 'app/bootstrap.php';
+require "app/bootstrap.php";
 
 class  Connection{
 
