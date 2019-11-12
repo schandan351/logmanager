@@ -2,7 +2,9 @@
 
 <?php require('partials/header.php');?>
     <div class="container">
-        <table class="table table-striped mt-5 ">
+        <h1>YOUR LOGS</h1>
+            <?php require('partials/filter.php');?>
+        <table class="table table-striped mt-3 ">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
