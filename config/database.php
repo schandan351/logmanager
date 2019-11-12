@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'name'=>'Dailylog',
-    'username'=>'root',
-    'password'=>'',
-    'connection'=>'mysql:host=localhost',
-    'options' => []
+    'name' => 'Dailylog',
+    'username' => 'root',
+    'password' => '',
+    'connection' => 'mysql:host=localhost',
+    'options' => [],
 ];

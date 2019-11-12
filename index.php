@@ -1,18 +1,15 @@
 <?php
 
-require __DIR__ ."/vendor/autoload.php";
+require __DIR__ . "/vendor/autoload.php";
 
-$query=require 'app/bootstrap.php';
+$query = require 'app/bootstrap.php';
 
 $databaseConfig = require __DIR__ . "/config/database.php";
 
-$config=require "config.php";
+$config = require "config.php";
 
- use App\database\Connection;
- use App\database\QueryBuilder;
- use App\Router;
- use App\Request;
-
+use App\Request;
+use App\Router;
 
 //  $pdo = Connection::make($databaseConfig);
 
@@ -22,8 +19,5 @@ $config=require "config.php";
 //  $query->delete('logs',2);
 //  die(var_dump($query));
 
-
 require Router::load('routes.php')
-    ->direct(Request::uri(),Request::method());
-
-
+    ->direct(Request::uri(), Request::method());
