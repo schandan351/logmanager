@@ -23,11 +23,12 @@
                                     <button type="submit" class="btn btn-primary">Edit</button>
                             </form>
                         </td>
-                       
                         <td>
-                            <form method='GET' action='/delete'>
+                            <!-- <form method='GET' action='/delete/?id=<?=$log->id;?>'>
                                 <button type="submit" class="btn btn-danger">Delete</button>
-                            </form>
+                            </form> -->
+                            <a type="submit" class="btn btn-danger" href="/delete/?id=<?=$log->id;?>">Delete</a>
+
                         </td>
                     </tr>
                 <?php endforeach;?>

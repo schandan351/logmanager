@@ -1,6 +1,7 @@
 <?php
+use App\App;
 
-var_dump($_POST['delete']);
-App::get('database')->delete('logs',$_POST['delete']);
+
+App::get('database')->delete('logs',$_GET['id']);
 
 header('Location:/');

@@ -2,9 +2,9 @@
 
 return [
     'database'=>[
-        'name'=>'logmanager',
-        'username'=>'non-root',
-        'password'=>'123',
+        'name'=>'Dailylog',
+        'username'=>'chandan',
+        'password'=>'chandan123',
         'connection'=>'mysql:host=localhost',
         'options'=>[
 
