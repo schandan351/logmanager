@@ -1,3 +1,4 @@
+<div>
 
 <form method='POST' action="/logs" >
     <div class="form-group">
@@ -10,3 +11,5 @@
     </div>
     <button type="submit" class="btn btn-primary mb-2">Add log</button>
 </form>
+
+</div>
