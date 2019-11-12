@@ -14,10 +14,11 @@ $config=require "config.php";
  use App\Request;
 
 
- $pdo = Connection::make($databaseConfig);
+//  $pdo = Connection::make($databaseConfig);
 
- $query=new QueryBuilder($pdo);
- $query->get('logs');
+//  $query=new QueryBuilder($pdo);
+//  $query->delete('logs',2);
+//  die(var_dump($query));
 
 
 require Router::load('routes.php')

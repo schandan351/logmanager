@@ -16,6 +16,7 @@ class QueryBuilder{
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
+
     public function insert($table,$parameters){
         $sql=sprintf(
             'insert into %s (%s) values (%s)',
@@ -30,4 +31,15 @@ class QueryBuilder{
        }catch(Exception $e){
            die('something wents wrongs');
        }
+    }
+  
+
+    public function delete($table,$id){
+        try{
+            $statement=$this->pdo->prepare("delete from {$table} where id ={$id}");
+            $statement->execute();
+        }catch(Exception $e){
+            die('delete operation failed');
+        }
+    }
 }
