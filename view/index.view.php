@@ -18,9 +18,17 @@
                         <th scope="row"><?=$log->id;?></th>
                         <td><?=$log->log;?></td>
                         <td><?=$log->date;?></td>
-                        <td> <a class="btn btn-primary">Edit</a></td>
+                        <td> 
+                            <form method='POST' action='/edit'>
+                                    <button type="submit" class="btn btn-primary">Edit</button>
+                            </form>
+                        </td>
                        
-                        <td> <a class="btn btn-danger" href="/delete/<?php echo $log->id;?>">Delete</a></td>
+                        <td>
+                            <form method='GET' action='/delete'>
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </td>
                     </tr>
                 <?php endforeach;?>
             </tbody>
