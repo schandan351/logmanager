@@ -36,6 +36,17 @@ class QueryBuilder
         }
     }
 
+    public function update($table, $logs, $date, $id)
+    {
+        $sql = "update {$table} SET log={$logs} ,date={$date} where id={$id}";
+        try {
+            $statement = $this->pdo->prepare($sql);
+            $statement->execute();
+        } catch (Exception $e) {
+            die('something wents wrongs');
+        }
+    }
+
     public function delete($table, $id)
     {
         try {

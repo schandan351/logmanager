@@ -22,6 +22,11 @@ class Router
         $this->routes['POST'][$uri] = $controller;
     }
 
+    public function update($uri, $controller)
+    {
+        $this->routes['POST'][$uri] = $controller;
+    }
+
     public function delete($uri, $controller)
     {
         if (array_key_exists($uri, $this->routes[$requestType])) {

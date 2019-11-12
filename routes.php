@@ -6,3 +6,4 @@ $router->get('filter-desc', 'app/Controller/FilterDescController.php');
 
 $router->post('addlogs', 'app/Controller/AddLogController.php');
 $router->get('delete', 'app/Controller/DeleteLogController.php');
+$router->post('edit', 'app/Controller/EditLogController.php');

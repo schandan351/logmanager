@@ -17,9 +17,11 @@
                 <td><?=$log->log;?></td>
                 <td><?=$log->date;?></td>
                 <td>
-                    <form method='POST' action='/edit'>
+                    <!-- <form method='POST' action='/edit'>
                         <button type="submit" class="btn btn-primary">Edit</button>
-                    </form>
+                    </form> -->
+                    <a type="submit" class="btn btn-primary" href="/edit/?id=<?=$log->id;?>">Edit</a>
+
                 </td>
                 <td>
                     <a type="submit" class="btn btn-danger" href="/delete/?id=<?=$log->id;?>">Delete</a>
