@@ -1,8 +1,8 @@
-<?php require('partials/header.php');?>
+<?php require 'partials/header.php';?>
 <div class="container">
-    <h1>YOUR LOGS</h1>
-    <?php require('partials/filter.php');?>
+    <?php require 'partials/filter.php';?>
     <table class="table table-striped mt-3 ">
+    <h3 class="mt-3">YOUR LOGS</h3>
         <thead>
             <tr>
                 <th scope="col">ID</th>
@@ -11,7 +11,7 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach($logs as $log):?>
+            <?php foreach ($logs as $log): ?>
             <tr>
                 <th scope="row"><?=$log->id;?></th>
                 <td><?=$log->log;?></td>
@@ -29,4 +29,4 @@
         </tbody>
     </table>
 </div>
-<?php require('partials/footer.php');?>
+<?php require 'partials/footer.php';?>

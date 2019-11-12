@@ -1,15 +1,16 @@
-<div>
-
-    <form method='POST' action="/logs">
+<?php require 'partials/header.php';?>
+<div class="container">
+    <form method="POST" action="/addlogs">
         <div class="form-group">
-            <label for="dateInput">Date</label>
-            <input type="text" class="form-control" id="dateInput" placeholder=" YYYY-MM-DD" name="date">
+            <label for="date">Date</label>
+            <input type="text" class="form-control" name="date">
         </div>
         <div class="form-group">
-            <label for="logsInput">Logs</label>
-            <textarea type="text" class="form-control" id="logsInput" placeholder="Another input" anme="log">
+            <label for="log">log</label>
+            <textarea type="text" class="form-control" name="logs"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary mb-2">Add log</button>
+        <button class="btn btn-primary">Add Log</button>
     </form>
 
 </div>
+<?php require 'partials/footer.php';?>
