@@ -17,6 +17,8 @@ $config=require "config.php";
 //  $pdo = Connection::make($databaseConfig);
 
 //  $query=new QueryBuilder($pdo);
+// var_dump($query->get('logs'));
+// die(var_dump($query->filter_desc('logs')));
 //  $query->delete('logs',2);
 //  die(var_dump($query));
 

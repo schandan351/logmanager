@@ -33,7 +33,6 @@ class QueryBuilder{
        }
     }
   
-
     public function delete($table,$id){
         try{
             $statement=$this->pdo->prepare("delete from {$table} where id ={$id}");
@@ -41,5 +40,11 @@ class QueryBuilder{
         }catch(Exception $e){
             die('delete operation failed');
         }
+    }
+
+    public function filter_desc($table){
+        $statement=$this->pdo->prepare("select * from {$table} order by date desc");
+        $statement->execute();
+        return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 }

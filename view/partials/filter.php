@@ -4,8 +4,8 @@
         filter
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-            <a class="dropdown-item" href="#">Newest</a>
-            <a class="dropdown-item" href="#">Oldest</a>
+            <a class="dropdown-item" href="/filter-desc">Newest</a>
+            <a class="dropdown-item" href="/">Oldest</a>
         </div>
     </div>
 </div>
