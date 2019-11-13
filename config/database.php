@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'name' => 'Dailylog',
-    'username' => 'root',
-    'password' => '',
+    'name' => 'logmanager',
+    'username' => 'non-root',
+    'password' => '123',
     'connection' => 'mysql:host=localhost',
     'options' => [],
 ];

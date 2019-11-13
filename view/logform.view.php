@@ -1,5 +1,6 @@
 <?php require 'partials/header.php';?>
-<div class="container">
+<div class="container mt-3">
+<h1>Add your logs</h1>
     <form method="POST" action="/addlogs">
         <div class="form-group">
             <label for="date">Date</label>

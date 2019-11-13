@@ -63,4 +63,10 @@ class QueryBuilder
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
+    public function filter_asc($table)
+    {
+        $statement = $this->pdo->prepare("select * from {$table} order by date asc");
+        $statement->execute();
+        return $statement->fetchAll(PDO::FETCH_CLASS);
+    }
 }
