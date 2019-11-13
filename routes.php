@@ -8,4 +8,6 @@ $router->get('filter-asc', 'app/Controller/FilterAscController.php');
 
 $router->post('addlogs', 'app/Controller/AddLogController.php');
 $router->get('delete', 'app/Controller/DeleteLogController.php');
-$router->post('edit', 'app/Controller/EditLogController.php');
+$router->post('update', 'app/Controller/EditLogController.php');
+
+$router->get('edit', 'app/Controller/GetSelectedDataController.php');
