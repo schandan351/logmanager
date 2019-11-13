@@ -1,8 +1,15 @@
+  
+    <form method="POST" action="/filter-date">
+        <input type="date" class="form-control mt-4 mb-3"  name="filter-date" required>
+        <button class="btn btn-primary">filter</button>
+    </form>
+
+  
 <div class="d-flex float-right">
     <div class="dropdown mr-1 mb-3">
         <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false" data-offset="10,20">
-            filter
+            Sort By
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
             <a class="dropdown-item" href="/filter-desc">Newest</a>

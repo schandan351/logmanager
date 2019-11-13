@@ -3,15 +3,15 @@
 <h1>Add your logs</h1>
     <form method="POST" action="/addlogs">
         <div class="form-group">
-            <label for="date">Date</label>
-            <input type="text" class="form-control" name="date">
+            <input type="date" id="start" name="date"
+       value="<?=strftime('%F');?>"
+       min="2015-01-01" max="2019-12-31" class="form-control">
         </div>
         <div class="form-group">
             <label for="log">log</label>
-            <textarea type="text" class="form-control" name="logs"></textarea>
+            <textarea type="text" class="form-control" name="logs" required></textarea>
         </div>
-        <button class="btn btn-primary">Add Log</button>
+        <button class="btn btn-primary">Add</button>
     </form>
-
 </div>
 <?php require 'partials/footer.php';?>

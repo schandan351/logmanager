@@ -83,4 +83,9 @@ class QueryBuilder
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
+    public function filter_date($table,$selecteddate){
+        $statement=$this->pdo->prepare("select * from $table where date='$selecteddate' ");
+        $statement->execute();
+        return $statement->fetchAll(PDO::FETCH_CLASS);
+    }
 }

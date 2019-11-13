@@ -11,3 +11,5 @@ $router->get('delete', 'app/Controller/DeleteLogController.php');
 $router->post('update', 'app/Controller/EditLogController.php');
 
 $router->get('edit', 'app/Controller/GetSelectedDataController.php');
+
+$router->post('filter-date', 'app/Controller/FilterDateController.php');
