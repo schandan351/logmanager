@@ -9,7 +9,7 @@
             </div>
             <div class="form-group">
                 <label for="log">log</label>
-                <input type="text" class="form-control" name="logs" value=<?=$selected_data->log;?>></input>
+                <textarea name="logs" class="form-control" id="" cols="100" rows="15"><?=$selected_data->log;?></textarea>
             </div>
         <?php endforeach;?>
         <button class="btn btn-primary text-white">save Log</button>
