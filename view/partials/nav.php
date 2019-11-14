@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
             
-            <!-- <?php session_start();?> -->
+            
             <?php if(!isset($_SESSION['email'])):?>
                 <li class="nav-item">
                     <a class="nav-link" href="/register-form">Register</a>
