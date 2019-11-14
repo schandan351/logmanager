@@ -12,7 +12,7 @@
                 <textarea name="logs" class="form-control" id="" cols="100" rows="15"><?=$selected_data->log;?></textarea>
             </div>
         <?php endforeach;?>
-        <button class="btn btn-primary text-white">save Log</button>
+        <button class="btn btn-primary text-white">save </button>
     </form>
 
 </div>

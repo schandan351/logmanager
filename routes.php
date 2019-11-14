@@ -13,3 +13,6 @@ $router->post('update', 'app/Controller/EditLogController.php');
 $router->get('edit', 'app/Controller/GetSelectedDataController.php');
 
 $router->post('filter-date', 'app/Controller/FilterDateController.php');
+
+$router->get('','app/Controller/UserController/UserLoginController.php');
+$router->post('login','app/Controller/UserController/UserLoginController.php');

@@ -46,8 +46,6 @@ class QueryBuilder
        
     }
 
-    
-
     public function update($table,$logs,$date,$id)
     {
         $sql = "update {$table} set log=?, date=? where id=?";
@@ -77,15 +75,29 @@ class QueryBuilder
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
+
     public function filter_asc($table)
     {
         $statement = $this->pdo->prepare("select * from {$table} order by date asc");
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
+
     public function filter_date($table,$selecteddate){
         $statement=$this->pdo->prepare("select * from $table where date='$selecteddate' ");
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
+
+    // for user
+
+    public function check_user($table,$email){
+        $sql=" SELECT email,password FROM {$table} WHERE email='{$email}' ";
+        $statement=$this->pdo->prepare($sql);
+        // $statement->bindValue(':email', $email);
+        $statement->execute(array($email,$password) );
+        return $statement->fetchAll(PDO::FETCH_CLASS);
+    }
 }
+
+// array($email,$password)
