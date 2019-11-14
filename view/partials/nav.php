@@ -12,6 +12,12 @@
             <li class="nav-item">
                 <a class="nav-link" href="/logs">Logs</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/register-form">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/login-form">Login</a>
+            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -19,7 +25,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="#">Profile</a>
-                    <a class="dropdown-item" href="#">Logout</a>
+                    <a class="dropdown-item" href="/logout">Logout</a>
                 </div>
             </li>
         </ul>
