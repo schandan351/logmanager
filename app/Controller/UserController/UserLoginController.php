@@ -17,11 +17,15 @@ if(isset($_POST['login'])){
             $validpassword=password_verify($password,$users->password);
             if($validpassword){
                 $_SESSION['email']=$users->email;
+                $_SESSION['firstname']=$users->firstname;
+
                 $_SESSION['logged_in']=time();
                 header('Location:/logs');
                 exit;
             }else{
-                die('username or password not matched');
+                echo ("<h1 class='container'>");
+                    die('username or password not matched');
+                echo("</h1>");
             }
         }
         

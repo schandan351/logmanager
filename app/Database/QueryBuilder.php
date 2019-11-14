@@ -92,7 +92,7 @@ class QueryBuilder
     // for user
 
     public function check_user($table,$email){
-        $sql=" SELECT email,password FROM {$table} WHERE email='{$email}' ";
+        $sql=" SELECT * FROM {$table} WHERE email='{$email}' ";
         $statement=$this->pdo->prepare($sql);
         // $statement->bindValue(':email', $email);
         $statement->execute() ;
