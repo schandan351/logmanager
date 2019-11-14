@@ -16,3 +16,9 @@ $router->post('filter-date', 'app/Controller/FilterDateController.php');
 
 $router->get('','app/Controller/UserController/UserLoginController.php');
 $router->post('login','app/Controller/UserController/UserLoginController.php');
+
+// $router->get('','app/Controller/UserController/UserRegisterController.php');
+$router->post('register','app/Controller/UserController/UserRegisterController.php');
+
+$router->get('logout','app/Controller/UserController/UserLogoutController.php');
+
