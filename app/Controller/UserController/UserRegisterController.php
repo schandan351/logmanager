@@ -2,7 +2,9 @@
 
 
 use App\App;
-
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 session_start();
 require 'view/login/register.view.php';
 
@@ -31,9 +33,13 @@ if(isset($_POST['register'])){
             'password' =>$passwordhash,
         ]);
 
-        echo "Thanks for registrations";
+        echo "<script>";
+        echo "alert('Thanks for registration')";
+        echo "</script>";
+
+            
     }
 
-    
+    header("Location:/login-form");
 
 }

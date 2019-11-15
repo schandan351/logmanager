@@ -2,7 +2,7 @@
 <div class="container">
     <?php require 'partials/filter.php';?>
     <table class="table table-striped mt-3 ">
-        <h3 class="mt-3">YOUR LOGS</h3>
+        <h1 class="mt-5 text-success"  style="text-align:center;">YOUR LOGS</h1>
             <thead>
                 <tr>
                     <th scope="col">ID</th>
@@ -11,9 +11,7 @@
                 </tr>
             </thead>
             <tbody>
-                <?php if($logs == false):?>
-                    <h1 style="text-align:center;">No logs available <a href="/">Add</a> </h1>
-                <?php endif;?>
+              
                 
                 <?php foreach ($logs as $log): ?>
                     <tr>
@@ -29,8 +27,15 @@
                         </td>
                     </tr>
                 <?php endforeach;?>
+
                 
             </tbody>
+          
     </table>
+    <?php if(($logs == false) and (!isset($_POST['filter-date-btn']))  ):?>
+        <h3 style="text-align:center; margin-top:50px;">You haven't added log yet  <a href="/">ADD</a> </h3>    
+    <?php elseif(($logs == false) and (isset($_POST['filter-date-btn']))):?>
+         <h1 class="text-center">No log on Selected date</h1>  
+    <?php endif;?>
 </div>
 <?php require 'partials/footer.php';?>
