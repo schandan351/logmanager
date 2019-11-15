@@ -1,7 +1,7 @@
   
     <form method="POST" action="/filter-date">
-        <input type="date" class="form-control mt-4 mb-3"  name="filter-date" required>
-        <button class="btn btn-primary">filter</button>
+        <input type="date" class="form-control mt-4 mb-3"  name="filter-date" required value=<?=$arr[0];?> >
+        <button class="btn btn-primary" type="submit">filter</button>
     </form>
 
   

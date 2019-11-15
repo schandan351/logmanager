@@ -5,7 +5,7 @@
         <div class="form-group">
             <input type="date" id="start" name="date"
        value="<?=strftime('%F');?>"
-       min="2015-01-01" max="2019-12-31" class="form-control">
+       min="2015-01-01" max="2020-12-31" class="form-control">
         </div>
         <div class="form-group">
             <label for="log">log</label>

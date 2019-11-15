@@ -5,7 +5,7 @@
      
             <div class="form-group">
                 <label for="date">Date</label>
-                <input type="text" class="form-control" name="date" value=<?=$selected_data->date;?>>
+                <input type="date" class="form-control" name="date" value=<?=$selected_data->date;?>>
             </div>
             <div class="form-group">
                 <label for="log">log</label>

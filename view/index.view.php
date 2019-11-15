@@ -15,6 +15,7 @@
             <tr>
                 <th scope="row"><?=$log->id;?></th>
                 <td><?=$log->log;?></td>
+                
                 <td><?=$log->date;?></td>
                 <td>
                     <a type="submit" class="btn btn-primary" href="/edit/?id=<?=$log->id;?>">Edit</a>

@@ -14,7 +14,7 @@ class QueryBuilder
 
     public function get($table)
     {
-        $statement = $this->pdo->prepare("select * from {$table}");
+        $statement = $this->pdo->prepare("select * from {$table} where userid={$_SESSION['userid']}");
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
@@ -71,20 +71,21 @@ class QueryBuilder
 
     public function filter_desc($table)
     {
-        $statement = $this->pdo->prepare("select * from {$table} order by date desc");
+        $statement = $this->pdo->prepare("select * from {$table}  where userid={$_SESSION['userid']} order by date desc");
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
     public function filter_asc($table)
     {
-        $statement = $this->pdo->prepare("select * from {$table} order by date asc");
+        $statement = $this->pdo->prepare("select * from {$table} where userid={$_SESSION['userid']} order by date asc ");
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
     public function filter_date($table,$selecteddate){
-        $statement=$this->pdo->prepare("select * from $table where date='$selecteddate' ");
+        // die(var_dump($_SESSION['userid']));
+        $statement=$this->pdo->prepare("select * from $table where date='$selecteddate' and userid={$_SESSION['userid']} ");
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }

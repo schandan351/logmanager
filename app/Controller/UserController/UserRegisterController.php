@@ -1,5 +1,6 @@
 <?php
 
+
 use App\App;
 
 session_start();
@@ -15,7 +16,10 @@ if(isset($_POST['register'])){
     $user = App::get('database')->check_user('user',$email);
 
     if($user==true){
-        die('user already exists');
+        echo("<h1 class='container'>");
+            die('user already exists');
+        echo("<h1/>");
+
     }else{
         $passwordhash=password_hash($password,PASSWORD_BCRYPT, array("cost" => 12));
         // die(var_dump(['password'=>$passwordhash]));
@@ -33,10 +37,3 @@ if(isset($_POST['register'])){
     
 
 }
-
-
-
-
-
-
-// require 'view/login/register.view.php';
